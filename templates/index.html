@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staycation Invitation 💖</title>
+    <title>Confession 💖</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -21,12 +21,15 @@
         }
         h1 {
             color: white;
-            font-size: 28px;
+            font-size: 24px; /* Ukuran lebih kecil agar lebih rapi */
             font-weight: 600;
             background: rgba(255, 255, 255, 0.3);
             padding: 15px;
             border-radius: 15px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Efek bayangan */
             animation: fadeIn 2s ease-in-out;
+            max-width: 80%; /* Agar teks tidak terlalu melebar */
+            line-height: 1.5; /* Jarak antar baris lebih nyaman dibaca */
         }
         #yesBtn, #noBtn {
             padding: 15px 40px;
@@ -57,6 +60,19 @@
             top: 60%;
             left: 50%;
         }
+        .move {
+            transition: transform 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;
+        }
+
+        .gif-container img {
+            position: absolute;
+            animation: float 4s ease-in-out infinite;
+            width: 120px;
+        }
+        .gif1 { top: 12%; left: 8%; }
+        .gif2 { top: 20%; right: 10%; animation-delay: 1s; }
+        .gif3 { bottom: 15%; left: 10%; animation-delay: 2s; }
+        .gif4 { bottom: 5%; right: 5%; animation-delay: 3s; }
 
         .watermark {
             position: absolute;
@@ -68,12 +84,32 @@
             padding: 5px;
             border-radius: 5px;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
 <body>
     <div class="watermark">This source was built by versaagonon, remove this on index.html and confirm.html to remove the watermark hehe</div>
     
-    <h1 id="mainText">Want to go on a Staycation with me? 🥺💕</h1>
+    <h1 id="mainText">From the moment I met you, I knew you were special.  
+        Every day, you make my world brighter and my heart warmer.  
+        Will you be mine? 🥺💕  
+    </h1>
+
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/j8UxjCDIYG0m7ZiBJk/giphy.gif" class="gif1">
+        <img src="https://media.giphy.com/media/8PPX8J5LDlzh1HQj0B/giphy.gif" class="gif2">
+        <img src="https://media.giphy.com/media/GDgQybbGhkKKXEaAF9/giphy.gif" class="gif3">
+        <img src="https://media.giphy.com/media/E4QK0D5v7RLkXIgVO7/giphy.gif" class="gif4">
+    </div>
 
     <button id="yesBtn" onclick="goToConfirm()">YES 💖</button>
     <button id="noBtn" class="move" onclick="moveNo()">NO 😭</button>
@@ -102,8 +138,11 @@
             let randomX = Math.floor(Math.random() * 50) - 25;
             let randomY = Math.floor(Math.random() * 50) - 25;
 
-            noBtn.style.left = (50 + randomX) + "%";
-            noBtn.style.top = (60 + randomY) + "%";
+            let currentX = parseInt(noBtn.style.left) || 50;
+            let currentY = parseInt(noBtn.style.top) || 60;
+
+            noBtn.style.left = (currentX + randomX) + "%";
+            noBtn.style.top = (currentY + randomY) + "%";
 
             mainText.innerHTML = noTexts[noClickCount % noTexts.length];
             noClickCount++;

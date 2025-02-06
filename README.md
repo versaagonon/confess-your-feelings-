@@ -21,7 +21,12 @@ git clone https://github.com/your-username/staycation-invite.git
 Open index.html in your preferred browser.
 
 🌍 Live Demo
-(If hosted, add your Netlify or GitHub Pages link here.)
+Use Local Host to try this repo or anything free hosting 
+local host, run on your command prompt  : 
+
+$ pip intsall flask
+
+$ python app.py 
 
 Enjoy and have fun inviting someone special! 🥰💖
 

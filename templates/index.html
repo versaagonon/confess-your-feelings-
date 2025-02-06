@@ -1,1 +1,147 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajak Staycation 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(120deg, #ffdde1, #ee9ca7);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-radius: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        #yesBtn, #noBtn {
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin: 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            position: absolute;
+        }
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0px 0px 12px rgba(255, 77, 109, 0.8);
+            top: 60%;
+            left: 40%;
+        }
+        #yesBtn:hover, #noBtn:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 0px 20px rgba(255, 77, 109, 1);
+        }
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            top: 60%;
+            left: 50%;
+        }
+        .move {
+            transition: transform 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;
+        }
+
+        .gif-container img {
+            position: absolute;
+            animation: float 4s ease-in-out infinite;
+            width: 120px;
+        }
+        .gif1 { top: 12%; left: 8%; }
+        .gif2 { top: 20%; right: 10%; animation-delay: 1s; }
+        .gif3 { bottom: 15%; left: 10%; animation-delay: 2s; }
+        .gif4 { bottom: 5%; right: 5%; animation-delay: 3s; }
+
+        .watermark {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">This source build by versaagonon, remove this on index.html and confirm.html to remove the watermark hehe</div>
+    
+    <h1 id="mainText">Mau Staycation Sama Aku? 🥺💕</h1>
+
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/j8UxjCDIYG0m7ZiBJk/giphy.gif" class="gif1">
+        <img src="https://media.giphy.com/media/8PPX8J5LDlzh1HQj0B/giphy.gif" class="gif2">
+        <img src="https://media.giphy.com/media/GDgQybbGhkKKXEaAF9/giphy.gif" class="gif3">
+        <img src="https://media.giphy.com/media/E4QK0D5v7RLkXIgVO7/giphy.gif" class="gif4">
+    </div>
+
+    <button id="yesBtn" onclick="goToConfirm()">YES 💖</button>
+    <button id="noBtn" class="move" onclick="moveNo()">NO 😭</button>
+
+    <script>
+        let yesBtn = document.getElementById("yesBtn");
+        let noBtn = document.getElementById("noBtn");
+        let mainText = document.getElementById("mainText");
+
+        let noTexts = [
+            "Wleee pindah kan 😝",
+            "Ga bisa wleeeee 🤪",
+            "Uda dibilang gabisa 😆",
+            "Coba terus deh 😂",
+            "Hahahah ketipu 🤭",
+            "Serius mau nolak? 🤨",
+            "Nyerah aja deh 🤣"
+        ];
+        let noClickCount = 0;
+
+        function goToConfirm() {
+            window.location.href = "/confirm";
+        }
+
+        function moveNo() {
+            let randomX = Math.floor(Math.random() * 50) - 25;
+            let randomY = Math.floor(Math.random() * 50) - 25;
+
+            let currentX = parseInt(noBtn.style.left) || 50;
+            let currentY = parseInt(noBtn.style.top) || 60;
+
+            noBtn.style.left = (currentX + randomX) + "%";
+            noBtn.style.top = (currentY + randomY) + "%";
+
+            mainText.innerHTML = noTexts[noClickCount % noTexts.length];
+            noClickCount++;
+        }
+    </script>
+</body>
+</html>

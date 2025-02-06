@@ -1,4 +1,4 @@
-# 💖 Confess Your Feeling  
+#  Confess Your Feeling  
 A fun and interactive way to confess your feelings in a cute and playful way! 🚀  
 
 This page includes animated GIFs, interactive buttons, and a "YES" or "NO" selection where the "NO" button keeps moving, making rejection impossible!  
@@ -8,14 +8,14 @@ This page includes animated GIFs, interactive buttons, and a "YES" or "NO" selec
 
 ---
 
-## 🎬 Live Demo  
+##  Live Demo  
 ![Demo](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGRoZndlYXU1b21xemJ1eGthdXIxODA4bmhjanQ5NXBqOTN3azc2eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LHZyixOnHwDDy/giphy.gif)  
 
 You can also try running this locally or using any free hosting service.  
 
 ---
 
-## ✨ Features  
+## Features  
 ✔ **Beautiful gradient background** with smooth animations  
 ✔ **Moving "NO" button** that makes it fun and challenging to decline  
 ✔ **Cute GIFs** to enhance the playful experience  
@@ -24,7 +24,7 @@ You can also try running this locally or using any free hosting service.
 
 ---
 
-## 🚀 How to Use  
+##  How to Use  
 1. Open `index.html` in your browser.  
 2. Click **"YES"** to accept the confession.  
 3. Try clicking **"NO"**, but it will keep running away! 😉  
@@ -33,7 +33,7 @@ You can also try running this locally or using any free hosting service.
 
 ---
 
-## 📦 Installation  
+##  Installation  
 Clone this repository:  
 ```sh
 git clone https://github.com/your-username/confess-your-feeling.git
@@ -45,7 +45,7 @@ Kalau kamu mau hasilnya langsung di sini tanpa pakai canvas, aku bisa kirim teks
 
 ---
 
-# 📖 README  
+#  README  
 
 ## 🎬 Output  
 Here is how the project looks when running:  
@@ -77,7 +77,7 @@ We welcome contributions! If you want to improve this project, follow these step
 
 This project is licensed under the MIT License.
 
-Enjoy and have fun confessing your feelings in the most playful way! ❤️😊
+Enjoy and have fun confessing your feelings in the most playful way! 😊
 
 - Best Regards, Versaagonon
 

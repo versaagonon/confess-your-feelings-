@@ -41,6 +41,32 @@ Run the app locally using Python and Flask:
 $ pip install flask  
 $ python app.py
 ```
+Kalau kamu mau hasilnya langsung di sini tanpa pakai canvas, aku bisa kirim teksnya langsung, sayang! Ini dia:  
+
+---
+
+# 📖 README  
+
+## 🎬 Output  
+Here is how the project looks when running:  
+
+### **Main Page Preview**  
+The initial screen displays a question and an expression along with "Yes" and "No" buttons. If the "No" button is pressed, the page transitions to the next screen.  
+
+![Screenshot](https://raw.githubusercontent.com/versaagonon/sayconfess/main/Screenshot%202025-02-06%20100700.png)  
+
+### **Second Page Preview**  
+If the "No" button is pressed, the page transitions to this screen, continuing the interaction.  
+
+![Screenshot](https://raw.githubusercontent.com/versaagonon/sayconfess/main/Screenshot%202025-02-06%20100719.png)  
+
+### **Final Page Preview**  
+If the "Yes" button is pressed, the page transitions to another screen where it says "Yes" to WhatsApp, Snapchat, or Instagram.  
+
+![Screenshot](https://raw.githubusercontent.com/versaagonon/sayconfess/main/Screenshot%202025-02-06%20100756.png)  
+
+---
+
 ## 🤝 Contributing  
 We welcome contributions! If you want to improve this project, follow these steps:  
 1. **Fork** this repository to your GitHub account.  

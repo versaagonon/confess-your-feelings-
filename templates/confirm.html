@@ -37,21 +37,40 @@
             margin-bottom: 20px;
             animation: fadeIn 3s ease-in-out;
         }
-        #confirmBtn {
-            padding: 15px 40px;
-            font-size: 20px;
+        .btn {
+            padding: 12px 30px;
+            font-size: 18px;
             border: none;
             cursor: pointer;
             border-radius: 12px;
-            background-color: #ff4d6d;
-            color: white;
             font-weight: 600;
-            box-shadow: 0px 0px 15px rgba(255, 77, 109, 0.8);
+            margin: 10px;
             transition: all 0.3s ease-in-out;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
         }
-        #confirmBtn:hover {
-            transform: scale(1.2);
-            box-shadow: 0px 0px 25px rgba(255, 77, 109, 1);
+        #whatsappBtn {
+            background-color: #25D366;
+            color: white;
+        }
+        #snapchatBtn {
+            background-color: #FFFC00;
+            color: black;
+        }
+        #instagramBtn {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+        }
+        .btn img {
+            width: 24px;
+            height: 24px;
         }
         .gif-container {
             margin-top: 20px;
@@ -62,7 +81,6 @@
             border-radius: 20px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -80,24 +98,49 @@
     </style>
 </head>
 <body>
-    <div class="watermark">This source was built by versaagonon, remove this on index.html and confirm.html to remove the watermark hehe</div>
+    <div class="watermark">This source was built by versaagonon, remove this on index.html and confirm.html to remove the watermark hehe, Dont
+    forget to change whatsapp url, instagram and snapchat on confirm.html </div>
+
     
     <h1>YAYYYY! 🥳🎉</h1>
-    <p>You really want to go on a staycation with me! 🥺💕</p>
+    <p>are you serious about being my boyfriend/girlfriend? 🥺💕</p>
 
     <div class="gif-container">
         <img src="https://media.giphy.com/media/xyGyp87gTXDbVPO5O0/giphy.gif">
         <img src="https://media.giphy.com/media/E4QK0D5v7RLkXIgVO7/giphy.gif">
     </div>
 
-    <button id="confirmBtn" onclick="goToWhatsApp()">LET'S TELL THEM YOU SAID YES 💕</button>
+    <div>
+        <button id="whatsappBtn" class="btn" onclick="goToWhatsApp()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Say yes on WhatsApp
+        </button>
+        <button id="snapchatBtn" class="btn" onclick="goToSnapchat()">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/1024px-Snapchat_logo.svg.png" alt="Snapchat">
+            Say yes on Snapchat
+        </button>
+        <button id="instagramBtn" class="btn" onclick="goToInstagram()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            Say yes on Instagram
+        </button>
+    </div>
 
     <script>
         function goToWhatsApp() {
-            let phone = "+627860172267";
+            let phone = "+6278****"; 
             let message = "I want to goooo :*";
             let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
             window.location.href = url;
+        }
+
+        function goToSnapchat() {
+            let snapUrl = `https://www.snapchat.com/`;
+            window.open(snapUrl, "_blank");
+        }
+
+        function goToInstagram() {
+            let instaUrl = `https://www.instagram.com/versaagonon/`;
+            window.open(instaUrl, "_blank");
         }
     </script>
 </body>

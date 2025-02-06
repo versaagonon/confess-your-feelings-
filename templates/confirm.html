@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konfirmasi 💕</title>
+    <title>Confirmation 💕</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -63,7 +63,6 @@
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Animasi */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -78,36 +77,25 @@
             padding: 5px;
             border-radius: 5px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
     </style>
 </head>
 <body>
-    <div class="watermark">This source build by versaagonon, remove this on index.html and confirm.html to remove the watermark hehe</div>
+    <div class="watermark">This source was built by versaagonon, remove this on index.html and confirm.html to remove the watermark hehe</div>
     
-    <h1>YEAYYYY! 🥳🎉</h1>
-    <p>Kamu beneran mau staycation sama aku! 🥺💕</p>
+    <h1>YAYYYY! 🥳🎉</h1>
+    <p>You really want to go on a staycation with me! 🥺💕</p>
 
-    <!-- Semua GIF dalam satu tempat -->
     <div class="gif-container">
         <img src="https://media.giphy.com/media/xyGyp87gTXDbVPO5O0/giphy.gif">
         <img src="https://media.giphy.com/media/E4QK0D5v7RLkXIgVO7/giphy.gif">
     </div>
 
-    <button id="confirmBtn" onclick="goToWhatsApp()">AYO BILANG KE DIA KALO KAMU MAU 💕</button>
+    <button id="confirmBtn" onclick="goToWhatsApp()">LET'S TELL THEM YOU SAID YES 💕</button>
 
     <script>
         function goToWhatsApp() {
             let phone = "+627860172267";
-            let message = "Aku mauuuuuuu :*";
+            let message = "I want to goooo :*";
             let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
             window.location.href = url;
         }

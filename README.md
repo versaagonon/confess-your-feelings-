@@ -7,20 +7,22 @@ Moving "NO" button that makes it fun and challenging to decline
 Cute GIFs to enhance the playful experience
 "YES" button confirmation redirects to another page
 WhatsApp integration to send a message upon confirmation
+
 🚀 How to Use
 Open index.html in a browser.
 Click the "YES" button to confirm.
 If you try clicking "NO," it will move randomly!
 Once confirmed, it will redirect to confirm.html.
 The confirmation page provides a button to send a WhatsApp message.
+
 📦 Installation
 Clone this repository:
-bash
-Copy
-Edit
 git clone https://github.com/your-username/staycation-invite.git  
 Open index.html in your preferred browser.
+
 🌍 Live Demo
 (If hosted, add your Netlify or GitHub Pages link here.)
 
 Enjoy and have fun inviting someone special! 🥰💖
+
+-best regard versaagonon
